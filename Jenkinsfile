@@ -37,6 +37,7 @@ pipeline {
                  docker build -t aicp/aicp-launcher:$BUILD_NUMBER .
                  docker push aicp/aicp-launcher:$BUILD_NUMBER
                 """
+            }
         }
       }
     }
@@ -53,5 +54,5 @@ pipeline {
      }
 
    }
-  }
+
 }
