@@ -7,4 +7,4 @@ data:
     aicp.kafkaTopic=aicp-topic
     aicp.kafkaGroupId=aicp_consumer_group
     aicp.kafkaBootstrapServers=kafka.kafka.svc.cluster.local:9092
-    aicp.dryRun=TRUE
+    aicp.dryRun=FALSE
