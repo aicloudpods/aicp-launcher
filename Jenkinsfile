@@ -4,7 +4,7 @@ pipeline {
 
     kubernetes {
 
-      label 'aicp-minio-build'
+      label 'aicp-kafka-launcher-build'
 
       defaultContainer 'jnlp'
 
