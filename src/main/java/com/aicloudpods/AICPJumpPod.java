@@ -39,7 +39,9 @@ public class AICPJumpPod implements CommandLineRunner {
                     System.out.println("Message received: " + record.value());
                     Event event = objectMapper.readValue(record.value(), Event.class);
                     System.out.println("Event arrived for the MasterURL file::"+ event.getMasterURL());
-                    //submitTheSparkJob(event);
+                    if(!Boolean.parseBoolean(kafkaConfig.getDryRun())){
+                        submitTheSparkJob(event);
+                    }
                 }
                 consumer.commitAsync();
             }

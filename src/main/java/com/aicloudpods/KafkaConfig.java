@@ -10,6 +10,7 @@ public class KafkaConfig {
     private String kafkaTopic;
     private String kafkaGroupId;
     private String kafkaBootstrapServers;
+    private String dryRun;
 
     public String getKafkaTopic() {
         return kafkaTopic;
@@ -33,5 +34,13 @@ public class KafkaConfig {
 
     public void setKafkaBootstrapServers(String kafkaBootstrapServers) {
         this.kafkaBootstrapServers = kafkaBootstrapServers;
+    }
+
+    public String getDryRun() {
+        return dryRun;
+    }
+
+    public void setDryRun(String dryRun) {
+        this.dryRun = dryRun;
     }
 }
