@@ -38,10 +38,7 @@ public class AICPJumpPod implements CommandLineRunner {
                 for (ConsumerRecord<String, String> record : records) {
                     System.out.println("Message received: " + record.value());
                     Event event = objectMapper.readValue(record.value(), Event.class);
-                    System.out.println("Event arrived for the MasterURL file::"+ event.getMasterURL());
-                    System.out.println("Dry-run is false outside"+ kafkaConfig.getDryRun());
                     if(!Boolean.parseBoolean(kafkaConfig.getDryRun())){
-                        System.out.println("Dry-run is false inside"+ kafkaConfig.getDryRun());
                         submitTheSparkJob(event);
                     }
                 }
