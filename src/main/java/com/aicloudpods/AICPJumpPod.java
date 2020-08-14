@@ -74,6 +74,8 @@ public class AICPJumpPod implements CommandLineRunner {
                 .setConf("spark.kubernetes.namespace", event.getJobNamespace())
                 .setConf("spark.kubernetes.authenticate.driver.serviceAccountName", event.getJobServiceAccount())
                 .setConf("spark.executor.instances", event.getJobExecutorInstances())
+                .setConf("spark.metrics.conf", event.getMetricsLocation())
+                .setConf("spark.driver.extraJavaOptions", event.getSparkDriverExtraOptions())
                 .setConf("spark.kubernetes.container.image", event.getJobContainerImage())
                 .setAppResource(event.getJobAppJarLocation())
                 .setVerbose(true)

@@ -9,6 +9,8 @@ public class Event {
     private String jobNamespace;
     private String jobServiceAccount;
     private String jobExecutorInstances;
+    private String metricsLocation;
+    private String sparkDriverExtraOptions;
     private String jobContainerImage;
     private String jobAppJarLocation;
 
@@ -66,6 +68,22 @@ public class Event {
 
     public void setJobExecutorInstances(String jobExecutorInstances) {
         this.jobExecutorInstances = jobExecutorInstances;
+    }
+
+    public String getMetricsLocation() {
+        return metricsLocation;
+    }
+
+    public void setMetricsLocation(String metricsLocation) {
+        this.metricsLocation = metricsLocation;
+    }
+
+    public String getSparkDriverExtraOptions() {
+        return sparkDriverExtraOptions;
+    }
+
+    public void setSparkDriverExtraOptions(String sparkDriverExtraOptions) {
+        this.sparkDriverExtraOptions = sparkDriverExtraOptions;
     }
 
     public String getJobContainerImage() {
