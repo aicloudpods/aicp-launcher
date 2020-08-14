@@ -5,3 +5,11 @@ resources:
   limits:
     cpu: "1000m"
     memory: "1Gi"
+
+elasticsearch:
+  enabled: false
+  external:
+    hosts[0]: ELASTICSEARCH-COORDINATING-NODE-NAME
+    port: 9200
+service:
+  type: LoadBalancer
