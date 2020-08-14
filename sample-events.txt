@@ -1,0 +1,8 @@
+-- LOCAL MINIKUBE/DOCKER FOR DESKTOP --
+{"appName":"AICPLauncherApp","masterURL":"k8s://https://kubernetes.docker.internal:6443","deployMode":"cluster","mainClass":"com.aicloudpods.SparkMinIO","jobNamespace":"spark","jobServiceAccount":"spark-sa","jobExecutorInstances":"2","jobContainerImage":"aicp/aicp-minio:9","jobAppJarLocation":"local:///opt/spark/examples/jars/sparkonminio.jar"}
+
+-- AWS EKS CLUSTER --
+{"appName":"AICPLauncherApp","masterURL":"k8s://https://6A47DEB29302EA87F282E49ACC17E9D7.sk1.eu-west-1.eks.amazonaws.com","deployMode":"cluster","mainClass":"com.aicloudpods.SparkMinIO","jobNamespace":"spark","jobServiceAccount":"spark-sa","jobExecutorInstances":"2","jobContainerImage":"aicp/aicp-minio:9","jobAppJarLocation":"local:///opt/spark/examples/jars/sparkonminio.jar"}
+
+-- GKE CLUSTER --
+{"appName":"AICPLauncherApp","masterURL":"k8s://https://34.70.74.90","deployMode":"cluster","mainClass":"com.aicloudpods.SparkMinIO","jobNamespace":"spark","jobServiceAccount":"spark-sa","jobExecutorInstances":"2","jobContainerImage":"aicp/aicp-minio:9","jobAppJarLocation":"local:///opt/spark/examples/jars/sparkonminio.jar"}
