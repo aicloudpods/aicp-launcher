@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: aicp-launcher
+  name: aicp-launcher
+spec:
+  containers:
+  - image: aicp/aicp-launcher:22
+    name: aicp-launcher
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
