@@ -1,15 +1,14 @@
-resources:
-  requests:
-    cpu: "1000m"
-    memory: "1Gi"
-  limits:
-    cpu: "1000m"
-    memory: "1Gi"
+#resources:
+#  requests:
+#    cpu: "1000m"
+#    memory: "1Gi"
+#  limits:
+#    cpu: "1000m"
+#    memory: "1Gi"
 
 elasticsearch:
-  enabled: false
-  external:
-    hosts[0]: ELASTICSEARCH-COORDINATING-NODE-NAME
-    port: 9200
-service:
-  type: LoadBalancer
+  hosts:
+  - elasticsearch-elasticsearch-coordinating-only.logging.svc.cluster.local
+  port: 9200
+#service:
+#  type: LoadBalancer

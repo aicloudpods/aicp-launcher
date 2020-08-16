@@ -6,6 +6,7 @@ aggregator:
   - name: ELASTICSEARCH_PORT
     value: "9200"
 forwarder:
+  configMap: fluentd-log-parser
   extraEnv:
   - name: FLUENTD_DAEMON_USER
     value: "root"
