@@ -18,7 +18,7 @@ spec:
         run: aicp-launcher
     spec:
       containers:
-        - image: aicp/aicp-launcher:latest
+        - image: aicp/aicp-launcher:22
           name: aicp-launcher
           resources: {}
 status: {}

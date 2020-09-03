@@ -8,5 +8,5 @@ subjects:
   namespace: spark
 roleRef:
   kind: ClusterRole
-  name: spark-role
+  name: spark-role-all
   apiGroup: rbac.authorization.k8s.io

@@ -24,7 +24,7 @@ public class AICPJumpPod implements CommandLineRunner {
 
     @Autowired
     private KafkaConfig kafkaConfig;
-    
+
     @Override
     public void run(String... args) {
 
@@ -68,6 +68,10 @@ public class AICPJumpPod implements CommandLineRunner {
                 .setMaster(event.getMasterURL())
                 .setDeployMode(event.getDeployMode())
                 .setMainClass(event.getMainClass())
+                .addAppArgs("cluster",
+                            "name",
+                            event.getMongoUser(),
+                            event.getMongoPwd())
                 .setConf("spark.kubernetes.namespace", event.getJobNamespace())
                 .setConf("spark.kubernetes.authenticate.driver.serviceAccountName", event.getJobServiceAccount())
                 .setConf("spark.executor.instances", event.getJobExecutorInstances())

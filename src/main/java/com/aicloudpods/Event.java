@@ -13,6 +13,8 @@ public class Event {
     private String sparkDriverExtraOptions;
     private String jobContainerImage;
     private String jobAppJarLocation;
+    private String mongoUser;
+    private String mongoPwd;
 
     public String getAppName() {
         return appName;
@@ -100,5 +102,21 @@ public class Event {
 
     public void setJobAppJarLocation(String jobAppJarLocation) {
         this.jobAppJarLocation = jobAppJarLocation;
+    }
+
+    public String getMongoUser() {
+        return mongoUser;
+    }
+
+    public void setMongoUser(String mongoUser) {
+        this.mongoUser = mongoUser;
+    }
+
+    public String getMongoPwd() {
+        return mongoPwd;
+    }
+
+    public void setMongoPwd(String mongoPwd) {
+        this.mongoPwd = mongoPwd;
     }
 }
